@@ -14,4 +14,4 @@ const EnvSchema = z.object({
     TAVILY_API_KEY : z.string().optional(),
 });
 
-    export const env = EnvSchema.parse(process.env);
+export const env = EnvSchema.parse(process.env);
