@@ -24,3 +24,17 @@ export const openUrlOutputSchema = z.object({
     url : z.url(),
     content : z.string().min(1)
 })
+
+export const SummerizeInputSchema = z.object({
+    text : z.string().min(50 , 'Need a bit more text to summarize')
+});
+
+export const SummerizeOutputSchema = z.object({
+    text : z.string().min(1)
+});
+
+export const SearchInputSchema = z.object({
+    q: z.string().min(5 , 'please ask a specific query')
+});
+
+export type SearchInput = z.infer<typeof SearchInputSchema>
