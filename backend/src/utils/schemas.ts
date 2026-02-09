@@ -30,7 +30,7 @@ export const SummerizeInputSchema = z.object({
 });
 
 export const SummerizeOutputSchema = z.object({
-    text : z.string().min(1)
+  summary: z.string().min(1),
 });
 
 export const SearchInputSchema = z.object({
