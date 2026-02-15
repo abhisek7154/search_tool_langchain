@@ -64,6 +64,5 @@ export const routerStep = RunnableLambda.from(async (input: {q: string}) => {
     return{
         q ,
         mode ,
-
     };
 });

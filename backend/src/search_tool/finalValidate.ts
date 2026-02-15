@@ -28,7 +28,7 @@ export const finalValidateAndPolish = RunnableLambda.from(
     }
 )
 
-async function repairSearchAns(obj: unknown): Promise<{answer : string ; sources : string[]}>{
+async function repairSearchAns(obj: any): Promise<{answer : string ; sources : string[]}>{
     const model = getChatModel({temperature: 0.2})
 
     const response = await model.invoke(
