@@ -1,6 +1,7 @@
 // cheap mode
 // call tavily , fetch , sumarize -> we will not do these
-// Simpley ask the model directly. 
+
+// Simpley ask the model directly.
 // Get a short helpful ans.
 
 import { RunnableLambda } from "@langchain/core/runnables";
@@ -9,7 +10,7 @@ import { getChatModel } from "../shared/model";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 
 export const directBasedPath = RunnableLambda.from(
-    async (input: {q: string ; mode : 'web'|'direct'}) : Promise<candidate>=> {
+    async (input: {q: string ; mode : 'web'|'direct'}) : Promise<candidate> => {
         const model = getChatModel({temperature : 0.2})
 
         const res = await model.invoke(

@@ -10,3 +10,6 @@ export type candidate = {
     sources : string[]; // Top 10 anime of the world
     mode : 'web' | 'direct';
 }
+
+// Explain what docker is 
+// Under 70k -> real browsing

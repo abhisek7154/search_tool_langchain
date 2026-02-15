@@ -30,7 +30,7 @@ export const openAndSummerizeStep = RunnableLambda.from(
             return {
                 ...input,
                 pageSummaries: [],
-                fallback: 'No results' as const
+                fallback: 'No-results' as const
             }
         }
 
@@ -89,7 +89,7 @@ export const composeStep = RunnableLambda.from(
         q: string;
         pageSummaries : Array<{url: string ; summary: string}>;
         mode: 'web'|'direct';
-        fallback : 'No results' | 'snippets' | 'none'
+        fallback : 'No-results' | 'snippets' | 'none'
     }): Promise<candidate>=> {
         const model = getChatModel({temperature : 0.2});
 
@@ -101,7 +101,7 @@ export const composeStep = RunnableLambda.from(
                         "If unsure , say so"
                     ].join('\n')
                 ),
-                new HumanMessage(input.q)
+                new HumanMessage(input.q)   
             ]);
 
             const directAns = (
