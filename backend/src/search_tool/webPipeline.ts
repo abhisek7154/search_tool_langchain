@@ -43,7 +43,7 @@ export const openAndSummerizeStep = RunnableLambda.from(
 
                 return {
                     url : opened.url,
-                    summery : summarizeContent.summary,
+                    summary : summarizeContent.summary,
 
                 }
             })
@@ -65,7 +65,7 @@ export const openAndSummerizeStep = RunnableLambda.from(
 
             return{
                 ...input,
-                pageSummaries : settledResultsPageSummaries,
+                pageSummaries : fallbackSnippetSummaries,
                 fallback : 'snippets' as const
 
             }

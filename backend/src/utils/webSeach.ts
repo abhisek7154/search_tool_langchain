@@ -18,7 +18,7 @@ export async function webSearch(q: string){
     return await searchTavilyUtil(query)
 }
 
-async function searchTavilyUtil(queary: string){
+async function searchTavilyUtil(query: string){
     if(!env.TAVILY_API_KEY)
     {
         throw new Error('Tavily api key missing!!!');
@@ -31,7 +31,7 @@ async function searchTavilyUtil(queary: string){
         Authorization: `Bearer ${env.TAVILY_API_KEY}`,
     },
     body : JSON.stringify({
-        queary , 
+        query , 
         search_depth : 'basic',
         max_results : 5,
         include_answer : false,
@@ -60,7 +60,8 @@ if (!response.ok){
 async function safeText(res: Response){
     try{
 
-        return await res.json();
+        const data = await res.json();
+        return JSON.stringify(data);
 
     }catch{
         return "<no body>"

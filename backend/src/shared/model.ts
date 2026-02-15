@@ -40,8 +40,7 @@ export function getChatModel(opts : ModelOpts = {}) : BaseChatModel{
             temperature : temp
         })
         
-        case 'openai':
-            default:
+    default:
 
         return new ChatOpenAI({
             apiKey: env.OPENAI_API_KEY,

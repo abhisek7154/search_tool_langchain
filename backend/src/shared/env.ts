@@ -8,7 +8,7 @@ const EnvSchema = z.object({
     GOOGLE_API_KEY : z.string().optional(),
     GROQ_API_KEY : z.string().optional(),
     OPENAI_MODEL : z.string().default('gpt-4o-mini'),
-    GEMINI_MODEL : z.string().default('gemini-2.0-flash-lite'),
+    GEMINI_MODEL : z.string().default('gemini-2.5-flash'),
     GROQ_MODEL : z.string().default('llama-3.1-8b-instant'),
     SEARCH_PROVIDER : z.string().default('tavily'),
     TAVILY_API_KEY : z.string().optional(),
