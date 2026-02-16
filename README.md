@@ -1,6 +1,82 @@
 # AI Search Tool (LangChain) 🔍🤖
 
-A robust, full-stack AI-powered search application that bridges the gap between real-time web search and Large Language Models. Built with **Next.js 16**, **Express**, and **LangChain**, this tool uses the Tavily API to fetch up-to-date information from the web and synthesizes comprehensive answers using your choice of LLM (OpenAI, Google Gemini, or Groq).
+AI Search Tool is a full-stack web application that combines real-time web search with Large Language Models to deliver accurate, source-backed answers. Built with Next.js, Express, and LangChain, it intelligently decides when to search the web or answer from the LLM's knowledge base, supporting OpenAI, Google Gemini, and Groq.
+
+---
+
+## 🖼️ Screenshots & UI Walkthrough
+![Home Screen - Light Mode](https://github.com/user-attachments/assets/84ea9d64-fad5-4c4b-b037-b60879651770)
+
+*The landing page presents a minimalist, inviting interface with example queries to guide users. Simply type your question and let the AI handle the rest.*
+
+**Features:**
+- Clean prompt input with contextual examples
+- Dark/Light mode toggle in the top-right corner
+- Smooth animations and intuitive layout
+
+---
+
+### 2. AI-Generated Answers with Sources
+
+![Search Result - Light Mode](https://github.com/user-attachments/assets/60032787-018b-4291-87ae-739b2553a905)
+
+*Query: "Top 10 highest-grossing movies of all time"*
+
+The app instantly returns comprehensive, AI-synthesized answers grounded in real web data. Each response includes:
+- **AI-Generated Summary:** Coherent, natural language explanation (answered in 4.3s)
+- **Cited Sources:** Clickable links to the original sources (editorial.rottentomatoes.com, reddit.com, manofmany.com)
+- **Transparency:** Full traceability of where the information comes from
+
+---
+
+### 3. Multi-Turn Conversational Q&A
+
+![Conversation - New Query](https://github.com/user-attachments/assets/bafac009-d054-4a26-a15e-1e503ca9de18
+)
+
+*Query: "What is space?"*
+
+The system supports follow-up questions and multi-turn conversations:
+- **Intelligent Context:** The agent understands your query and decides whether web search is needed
+- **Fast Responses:** Some queries are answered from the LLM's knowledge base in **0.5 seconds**
+- **Educational Content:** Answers are tailored for clarity and accessibility
+- **No hallucination:** Web search ensures factual accuracy
+
+---
+
+### 4. Dark Mode for Night-Time Browsing
+
+![Dark Mode - Multiple Interactions](https://github.com/user-attachments/assets/247a13ee-8973-453a-8a19-c59ec2ecd9f1
+)
+
+*The same powerful search experience in dark mode.*
+
+All features remain intact:
+- **Consistent Functionality:** Dark mode doesn't compromise performance
+- **Eye-Friendly:** Perfectly suited for low-light environments
+- **Professional Appearance:** Sleek, modern design aesthetic
+
+---
+
+## 📊 How It Works (Quick Flow)
+
+```
+User Query
+    ↓
+[LangChain Agent - Express Backend]
+    ↓
+Decision: Web Search Needed?
+    ├─→ Yes: Query Tavily API → Parse HTML → Feed to LLM
+    └─→ No: Direct LLM Response
+    ↓
+[LLM Processing] (OpenAI/Groq/Gemini)
+    ↓
+Synthesized Answer + Source Links
+    ↓
+Stream to Frontend (Next.js)
+    ↓
+User sees response with citations & sources
+```
 
 ---
 
