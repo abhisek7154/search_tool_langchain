@@ -18,13 +18,14 @@ AI Search Tool is a full-stack web application that combines real-time web searc
 
 ### 2. AI-Generated Answers with Sources
 
-![Search Result - Light Mode](https://github.com/user-attachments/assets/60032787-018b-4291-87ae-739b2553a905)
+![Search Result - Light Mode](https://github.com/user-attachments/assets/02ffd441-62cf-43d5-9bd3-8f87559b3da3
+)
 
-*Query: "Top 10 highest-grossing movies of all time"*
+*Query: "Query: "Top 10 anime of 2024"*
 
 The app instantly returns comprehensive, AI-synthesized answers grounded in real web data. Each response includes:
-- **AI-Generated Summary:** Coherent, natural language explanation (answered in 4.3s)
-- **Cited Sources:** Clickable links to the original sources (editorial.rottentomatoes.com, reddit.com, manofmany.com)
+- **AI-Generated Summary:** Coherent, natural language explanation (answered in 5.8s)
+- **Cited Sources:** Clickable links to the original sources (Reddit, Anime News Network, MyAnimeList)
 - **Transparency:** Full traceability of where the information comes from
 
 ---
